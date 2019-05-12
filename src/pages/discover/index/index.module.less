@@ -1,0 +1,284 @@
+@import '../../../styles/mixins.less';
+
+.index-bg {
+    background: url('../../../assets/index.png') no-repeat 0 -9999px;
+}
+
+.banner {
+    position: relative;
+    height: 336px;
+
+    &Contaner {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+    }
+
+    &Item {
+        width: 100%;
+        height: 100%;
+        background-repeat: repeat-x;
+
+        &Inner {
+            position: relative;
+            width: 982px;
+            height: 336px;
+            margin: 0 auto;
+        }
+    }
+
+    &Download {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        &Container {
+            position: relative;
+            width: 982px;
+            height: 336px;
+            margin: 0 auto;
+
+            .item {
+                position: absolute;
+                top: 0;
+                z-index: 20;
+                right: -1px;
+                width: 254px;
+                height: 336px;
+                background: url('../../../assets/download.png') no-repeat 0 0;
+
+                &Btn {
+                    display: block;
+                    width: 215px;
+                    height: 56px;
+                    margin: 212px 0 0 19px;
+                    text-indent: -9999px;
+                    background: url('../../../assets/download.png') no-repeat 0 0;
+                    background-position: 0 -340px;
+                    text-decoration: none;
+                }
+
+                &Shadow {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    width: 20px;
+                    height: 336px;
+                    background-position: -1px 0;
+                    background: url('../../../assets/banner.png')0 9999px no-repeat;
+                }
+
+                &Left {
+                    left: -20px;
+                    background-position: -1px 0;
+                }
+
+                &Right {
+                    right: -20px;
+                    background-position: -20px 0;
+                }
+
+                &Tips {
+                    margin: 10px auto;
+                    text-align: center;
+                    color: #8d8d8d;
+                }
+            }
+
+        }
+    }
+}
+
+.main {
+    width: 980px;
+    min-height: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-width: 0 1px;
+    display: flex;
+    justify-content: space-between;
+
+    &Left {
+        width: 0;
+        flex: 1;
+        padding: 20px 20px 40px;
+
+        &Panel {
+            width: 100%;
+            margin-bottom: 35px;
+        }
+
+        .panelLink {
+            margin-left: 20px;
+            font-size: 12px;
+
+            &Txt {
+                color: #666;
+            }
+
+            &Line {
+                margin: 0 10px;
+                color: #ccc;
+            }
+        }
+
+        .playList {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0 0 -42px;
+
+            &Item {
+                width: 25%;
+                padding: 0 0 30px 42px;
+            }
+        }
+
+        .topList {
+            display: flex;
+            margin-top: 20px;
+            border: 1px solid #c8c8c8;
+        }
+    }
+
+    &Right {
+        width: 250px;
+        border-left: 1px solid #d3d3d3;
+
+        .login {
+            height: 126px;
+            .index-bg();
+            padding-top: 0;
+            background-position: 0 0;
+
+            &Tip {
+                width: 205px;
+                margin: 0 auto;
+                padding: 16px 0;
+                line-height: 22px;
+                font-size: 12px;
+            }
+
+            &Btn {
+                text-align: center;
+
+                &Main {
+                    display: inline-block;
+                    width: 100px;
+                    height: 31px;
+                    line-height: 31px;
+                    text-align: center;
+                    color: #fff;
+                    .index-bg();
+                    background-position: 0 -195px;
+                    text-shadow: 0 1px 0 #8a060b;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-position: -110px -195px;
+                    }
+                }
+            }
+        }
+
+        .panel {
+            margin-top: 15px;
+            padding: 0 20px;
+
+            &Title {
+                .flex-between-center();
+                position: relative;
+                height: 23px;
+                border-bottom: 1px solid #ccc;
+                color: #333;
+
+                &Label {
+                    color: #333;
+                    font-weight: 600;
+                }
+
+                &More {
+                    font-size: 12px;
+                    color: #666;
+                }
+            }
+
+            .artists {
+
+                &Item {
+                    height: 62px;
+                    margin-top: 14px;
+                    .flex-start-center();
+
+                    &Pic {
+                        width: 62px;
+                        height: 62px;
+
+                    }
+
+                    &Info {
+                        flex: 1;
+                        width: 0;
+                        height: 100%;
+                        border: 1px solid #e9e9e9;
+                        border-left: 0;
+                        padding-left: 14px;
+                        background: #fafafa;
+
+                        &:hover {
+                            background: #f4f4f4;
+                        }
+
+                        .arttxt {
+                            width: 90%;
+                            .hide();
+                            margin: 8px 0 0;
+                        }
+
+                        .artname {
+                            color: #000;
+                            font-size: 13px;
+                            font-weight: 600;
+                        }
+
+                        .artalias {
+                            color: #666;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                display: inline-block;
+                width: 100%;
+                height: 31px;
+                line-height: 31px;
+                overflow: hidden;
+                vertical-align: top;
+                text-align: center;
+                cursor: pointer;
+                .btn2();
+                border-radius: 4px;
+                background-position: right -100px;
+                padding: 0 5px 0 0;
+
+                &Txt {
+                    width: 100%;
+                    display: inline-block;
+                    height: 31px;
+                    line-height: 31px;
+                    overflow: hidden;
+                    vertical-align: top;
+                    text-align: center;
+                    cursor: pointer;
+                    font-weight: bold;
+                    .btn2();
+                    background-position: 0 -59px;
+                }
+            }
+        }
+    }
+}

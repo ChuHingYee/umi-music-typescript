@@ -1,0 +1,85 @@
+@import '../../styles/mixins.less';
+
+.info {
+    &Header {
+        height: 34px;
+        font-weight: normal;
+        font-size: 24px;
+        color: #333;
+
+        &Ali {
+            max-width: 23%;
+            padding-left: 10px;
+            font-size: 14px;
+            line-height: 32px;
+            color: #999;
+            font-weight: normal;
+        }
+    }
+
+    &Ava {
+        display: block;
+        width: 640px;
+        height: 300px;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &Mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            .mask-bg();
+
+        }
+    }
+
+    &Nav {
+        width: 100%;
+        display: flex;
+        height: 39px;
+        border: 1px solid #ccc;
+        border-width: 0 1px;
+        .tab-bg();
+        background-position: 0 0;
+        background-repeat: repeat-x;
+
+        &Item {
+            height: 39px;
+            font-size: 14px;
+            .tab-bg();
+
+            em {
+                display: inline-block;
+                width: 134px;
+                height: 37px;
+                padding: 2px 2px 0 0;
+                line-height: 37px;
+                cursor: pointer;
+                text-align: center;
+                color: #333;
+                .tab-bg();
+            }
+
+            &:hover {
+                em {
+                    background-position: right -45px;
+                }
+            }
+        }
+
+        &Actived {
+            background-position: left -90px;
+            padding-left: 2px;
+
+            em {
+                background-position: right -90px;
+            }
+        }
+    }
+}

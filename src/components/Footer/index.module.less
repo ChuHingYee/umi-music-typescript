@@ -1,0 +1,98 @@
+@import '../../styles/mixins.less';
+
+.footer {
+    position: relative;
+    height: 148px;
+    overflow: hidden;
+    border-top: 1px solid #d3d3d3;
+    background: #f2f2f2;
+
+    &Container {
+        width: 980px;
+        margin: 0 auto;
+        .flex-between-center();
+
+        .info {
+            padding-top: 15px;
+
+            &Link {
+                line-height: 24px;
+
+                &Txt {
+                    color: #999;
+                    font-size: 12px;
+                }
+
+                &Line {
+                    margin: 0 8px 0 10px;
+                    color: #c2c2c2;
+                }
+            }
+        }
+
+        .nav {
+            padding-top: 21px;
+            .flex-end-center();
+
+            &Item {
+                display: flex;
+                flex-direction: column;
+                margin-left: 30px;
+
+                &Icon {
+                    display: inline-block;
+                    width: 50px;
+                    height: 45px;
+                    background: url('../../assets/foot_enter_new.png') no-repeat 0 9999px;
+                    background-size: 110px 450px;
+                    margin: 0 auto;
+                }
+
+                .navIconUser {
+                    background-position: -63px -101px
+                }
+
+                .navIconMusic {
+                    background-position: 0 0;
+                }
+
+
+                .navIconay {
+                    background-position: -60px -50px;
+                }
+
+                .navIconVideo {
+                    background-position: 0 -101px;
+                }
+
+                &Label {
+                    margin: 5px 5px 0;
+                    width: 52px;
+                    height: 14px;
+                    text-align: center;
+                    font-size: 12px;
+                    text-indent: -9999px;
+                    background: url('../../assets/foot_enter_tt.png') no-repeat 0 9999px;
+                    background-size: 180px 100px;
+                }
+
+                .navLabelUser {
+                    background-position: -1px -91px;
+                }
+
+                .navLabelMusic {
+                    background-position: 0 0;
+                }
+
+                .navLabelPay {
+                    background-position: 0 -54px;
+                }
+
+                .navLabelVideo {
+                    background-position: -1px -72px;
+                }
+
+            }
+        }
+    }
+}

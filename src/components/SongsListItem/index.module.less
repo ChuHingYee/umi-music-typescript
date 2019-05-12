@@ -1,0 +1,83 @@
+@import '../../styles/mixins.less';
+
+.song {
+    .flex-start-center();
+
+
+
+    &Td {
+        padding: 6px 10px;
+        line-height: 18px;
+        .flex-start-center();
+
+        &Name {
+            color: #333;
+            font-size: 12px;
+        }
+
+        &Alia {
+            color: #aeaeae;
+            font-size: 12px;
+        }
+
+        &Icon {
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            margin-right: 8px;
+            cursor: pointer;
+            .table-bg();
+        }
+
+        &Play {
+            background-position: 0 -103px;
+
+            &:hover {
+                background-position: 0 -128px;
+            }
+        }
+
+        &Mv {
+            width: 23px;
+            height: 17px;
+            margin: 0 0 0 8px;
+            background-position: 0 -151px;
+
+            &:hover {
+                background-position: -30px -151px;
+            }
+        }
+    }
+
+    &Art {
+        color: #666;
+        .hide();
+        display: inline-block;
+
+        .artItem {
+            font-size: 12px;
+            color: #666;
+        }
+    }
+
+}
+
+.odd {
+    background-color: #f7f7f7;
+}
+
+.row1 {
+    width: 77px;
+}
+
+.row2 {
+    flex: 1;
+}
+
+.row3 {
+    width: 91px;
+}
+
+.row4 {
+    width: 128px;
+}

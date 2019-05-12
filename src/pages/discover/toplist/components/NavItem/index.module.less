@@ -1,0 +1,39 @@
+@import '../../../../../styles/mixins.less';
+
+.item {
+    padding: 10px 0 10px 20px;
+    height: 62px;
+    .flex-start-center;
+
+    &Pic {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    &Info {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        width: 0;
+
+        &Txt {
+            display: inline-block;
+            width: 100%;
+            font-size: 12px;
+            .hide();
+        }
+
+        &Name {
+            color: #000;
+        }
+
+        &Desc {
+            color: #999;
+        }
+    }
+}
+
+.actived {
+    background: #e6e6e6;
+}

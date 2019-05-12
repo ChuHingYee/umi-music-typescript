@@ -1,0 +1,76 @@
+@import '../../../styles/mixins.less';
+
+.body {
+    &Row {
+        .flex-start-center();
+
+        &:nth-child(odd) {
+            background-color: #f7f7f7;
+        }
+
+        &Td {
+            padding: 6px 10px;
+            line-height: 18px;
+            .flex-start-center();
+
+            .tdName {
+                color: #333;
+                font-size: 12px;
+            }
+
+            .tdAlia {
+                color: #aeaeae;
+                font-size: 12px;
+            }
+
+        }
+
+        .bIcon {
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            margin-right: 8px;
+            cursor: pointer;
+            .table-bg();
+        }
+
+        .bIconRed {
+            background-position: -20px -128px;
+        }
+
+        .bIconPlay {
+            background-position: 0 -103px;
+
+            &:hover {
+                background-position: 0 -128px;
+            }
+        }
+
+        .bIconMv {
+            width: 23px;
+            height: 17px;
+            margin: 0 0 0 8px;
+            background-position: 0 -151px;
+
+            &:hover {
+                background-position: -30px -151px;
+            }
+        }
+    }
+
+    .row1 {
+        width: 77px;
+    }
+
+    .row2 {
+        flex: 1;
+    }
+
+    .row3 {
+        width: 91px;
+    }
+
+    .row4 {
+        width: 128px;
+    }
+}

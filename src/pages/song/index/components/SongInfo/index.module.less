@@ -1,0 +1,101 @@
+@import '../../../../../styles/mixins.less';
+
+.info {
+    display: flex;
+    width: 100%;
+
+    &Left {
+        margin-right: 20px;
+
+        &Cover {
+            width: 206px;
+            height: 206px;
+            position: relative;
+            .flex-center-center();
+
+            .pic {
+                width: 130px;
+                height: 130px;
+            }
+
+            .mask {
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                .cover-bg();
+                background-position: -140px -580px;
+            }
+        }
+    }
+
+    &Right {
+        flex: 1;
+
+        .name {
+            .flex-start-center();
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .row {
+            font-size: 12px;
+            color: #999;
+            line-height: 30px;
+            margin-bottom: 0;
+
+            &Link {
+                color: #0c73c2;
+            }
+        }
+
+        .btns {
+            .flex-start-center();
+            margin-bottom: 25px;
+
+            &Item {
+                margin-right: 5px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .lrc {
+            &Row {
+                font-size: 12px;
+                color: #333;
+                line-height: 23px;
+                word-wrap: break-word;
+                word-break: break-word;
+                white-space: normal;
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            &Hide {
+                display: none;
+            }
+
+            &Btn {
+                color: #0c73c2;
+                cursor: pointer;
+            }
+        }
+
+        .tips {
+            text-align: right;
+            margin-top: 48px;
+            line-height: 30px;
+
+            &Link {
+                color: #0c73c2;
+            }
+        }
+    }
+}

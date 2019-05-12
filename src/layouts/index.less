@@ -1,0 +1,345 @@
+@import '../styles/mixins.less';
+
+.header {
+    min-width: 1100px;
+    position: relative;
+    z-index: 1000;
+    height: 70px;
+    box-sizing: border-box;
+    background: #242424;
+    border-bottom: 1px solid #000;
+    .flex-center-center();
+
+    &::before {
+        position: absolute;
+        content: '';
+        height: 5px;
+        background-color: #c20c0c;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+    }
+
+    &Container {
+        width: 1100px;
+        min-width: 1100px;
+        .flex-between-center();
+        flex-shrink: 0;
+
+        &Left {
+            .flex-start-center();
+
+            .logo {
+                width: 176px;
+                height: 69px;
+                .header-bg();
+                background-position: 0 0;
+                margin-bottom: 0;
+
+                &Link {
+                    display: inline-block;
+                    width: 157px;
+                    height: 100%;
+                    padding-right: 20px;
+                    text-indent: -9999px;
+                }
+            }
+        }
+
+        &Right {
+            .flex-end-center();
+
+            .search {
+                width: 158px;
+                height: 32px;
+                .header-bg();
+                background-position: 0 -99px;
+                background-color: #fff;
+                border-radius: 32px;
+                padding-left: 30px;
+                .flex-start-center();
+
+                &Input {
+                    width: 95%;
+                    margin: 0;
+                    padding: 0;
+                    background: transparent;
+                    color: #333;
+                    border: 0;
+                }
+            }
+
+            .creater {
+                width: 90px;
+                height: 32px;
+                margin-left: 12px;
+                box-sizing: border-box;
+                padding-left: 16px;
+                border: 1px solid #4f4f4f;
+                background-position: 0 -140px;
+                line-height: 33px;
+                color: #ccc;
+                border-radius: 20px;
+                font-size: 12px;
+
+                &:hover {
+                    border-color: #fff;
+                }
+            }
+
+            .login {
+                margin-left: 20px;
+                font-size: 12px;
+                color: #787878;
+                display: inline-block;
+                height: 69px;
+                line-height: 69px;
+
+                &Item {
+                    height: 38px;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    padding-left: 24px;
+                    color: #ccc;
+                    line-height: 39px;
+                    border: 1px solid #232323;
+                    border-width: 1px 0;
+                }
+            }
+        }
+    }
+}
+
+.player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    width: 100%;
+    z-index: 1002;
+
+    &Container {
+        width: 100%;
+        height: 53px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: -53px;
+        .player-bg();
+        background-position: 0 0;
+        background-repeat: repeat-x;
+        .flex-center-center();
+
+        &Wrap {
+            // position: absolute;
+            // left: 50%;
+            // top: 6px;
+            z-index: 15;
+            width: 980px;
+            height: 47px;
+            .flex-start-center();
+
+            .btns {
+                width: 137px;
+                padding: 6px 0 0 0;
+
+                &Icon {
+                    display: inline-block;
+                    width: 28px;
+                    height: 28px;
+                    margin-right: 8px;
+                    margin-top: 5px;
+                    text-indent: -9999px;
+                    .player-bg();
+                    cursor: pointer;
+                }
+
+                &Prev {
+                    background-position: 0 -130px;
+                }
+
+                &Play {
+                    width: 36px;
+                    height: 36px;
+                    margin-top: 0;
+                    background-position: 0 -204px;
+                }
+
+                &Next {
+                    background-position: -80px -130px;
+                }
+            }
+
+            .pic {
+                margin-right: 15px;
+                width: 34px;
+                height: 34px;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &Mask {
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    .player-bg();
+                    background-position: 0 -80px;
+                }
+            }
+
+            .play {
+                width: 608px;
+
+                &Info {
+                    height: 28px;
+                    overflow: hidden;
+                    color: #e8e8e8;
+                    text-shadow: 0 1px 0 #171717;
+                    .flex-start-center();
+
+                    &Name {
+                        max-width: 300px;
+                        color: #e8e8e8;
+                        .hide();
+                        margin-right: 15px;
+                    }
+
+                    &Artist {
+                        color: #9b9b9b;
+                    }
+                }
+
+                &Bar {
+                    .flex-start-center();
+
+                    &Pro {
+                        width: 493px;
+                        height: 9px;
+                        background-position: right 0;
+                        .bar-bg();
+                        position: relative;
+
+                        .rdy {
+                            .bar-bg();
+                            height: 9px;
+                            background-position: right -30px;
+                        }
+
+                        .done {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 0%;
+                            height: 9px;
+                            .bar-bg();
+                            background-position: left -66px;
+
+                            &Icon {
+                                position: absolute;
+                                top: -7px;
+                                right: -13px;
+                                width: 22px;
+                                height: 24px;
+                                margin-left: -11px;
+                                .icon-all();
+                                background-position: 0 -250px;
+                            }
+                        }
+                    }
+
+                    &Time {
+                        display: inline-block;
+                        margin-left: 8px;
+                        color: #797979;
+                        text-shadow: 0 1px 0 #121212;
+
+                        .cur {
+                            color: #a1a1a1;
+                        }
+                    }
+                }
+            }
+
+            .open {
+                width: 60px;
+                .flex-start-center();
+
+                &Icon {
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    text-indent: -9999px;
+                    .player-bg();
+                    cursor: pointer;
+                }
+
+                &Add {
+                    background-position: -88px -163px;
+
+                    &:hover {
+                        background-position: -88px -189px;
+                    }
+                }
+
+                &Share {
+                    background-position: -114px -163px;
+
+                    &:hover {
+                        background-position: -114px -189px;
+                    }
+                }
+
+            }
+
+            .ctrl {
+                .flex-start-center();
+
+                &Icon {
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    .player-bg();
+                    text-indent: -9999px;
+                }
+
+                &Vol {
+                    background-position: -2px -248px;
+
+                    &:hover {
+                        background-position: -31px -248px;
+                    }
+                }
+
+                &Mode {
+                    background-position: -66px -344px;
+
+                    &:hover {
+                        background-position: -93px -344px;
+                    }
+                }
+
+                &List {
+                    display: inline-block;
+                    width: 59px;
+                    padding-left: 21px;
+                    .player-bg();
+                    background-position: -42px -68px;
+                    line-height: 27px;
+                    text-align: center;
+                    color: #666;
+                    text-shadow: 0 1px 0 #080707;
+                    text-indent: 0;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

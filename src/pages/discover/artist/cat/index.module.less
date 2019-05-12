@@ -1,0 +1,68 @@
+@import '../../../../styles/mixins.less';
+
+.artist {
+    padding: 40px;
+
+    &Nav {
+        margin-top: 20px;
+        margin-left: -3px;
+        display: flex;
+        align-items: center;
+
+        &Item {
+            margin-left: 3px;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        &En {
+            width: 21px;
+        }
+
+        &Cn {
+            width: 45px;
+        }
+
+        &Actived {
+            background: #c20c0c;
+            border-radius: 2px;
+            color: #fff;
+        }
+
+    }
+
+    &Panel {
+        margin: 20px 0 0 -17px;
+        display: flex;
+        flex-wrap: wrap;
+
+        &Item {
+            margin: 0 0 30px 17px;
+        }
+
+        &Link {
+            height: 30px;
+            width: 130px;
+            margin-left: 17px;
+            .flex-start-center();
+
+            .name {
+                max-width: 105px;
+                color: #000;
+                font-size: 12px;
+                .hide();
+            }
+
+            .icon {
+                .icon();
+                display: inline-block;
+                width: 17px;
+                height: 18px;
+                background-position: 0 -740px;
+                margin: 3px 0 0 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import '../../../../../styles/mixins.less';
+
+.row {
+    display: flex;
+
+    &Label {
+        width: 96px;
+        padding-top: 15px;
+        padding-left: 26px;
+        border-right: 1px solid #e6e6e6;
+        font-size: 12px;
+        font-weight: 600;
+
+        .lIcon {
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: middle;
+            .icon();
+            margin-right: 8px;
+            margin-bottom: 4px;
+        }
+
+        .lIcon1 {
+            width: 23px;
+            height: 23px;
+            background-position: -20px -735px;
+        }
+
+        .lIcon2 {
+            width: 24px;
+            height: 24px;
+            background-position: 0 -60px;
+        }
+
+        .lIcon3 {
+            width: 24px;
+            height: 24px;
+            background-position: 0 -88px;
+        }
+
+        .lIcon4 {
+            width: 24px;
+            height: 24px;
+            background-position: 0 -117px;
+        }
+
+        .lIcon5 {
+            width: 24px;
+            height: 24px;
+            background-position: 0 -141px;
+        }
+    }
+
+    &Types {
+        flex: 1;
+        padding: 16px 15px 0 15px;
+
+        .typeName {
+            color: #333;
+            white-space: nowrap;
+            font-size: 12px;
+        }
+
+        .typeLine {
+            display: inline-block;
+            margin: 0 8px 0 10px;
+            color: #d8d8d8;
+        }
+    }
+}

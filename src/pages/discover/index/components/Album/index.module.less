@@ -1,0 +1,37 @@
+@import '../../../../../styles/mixins.less';
+
+.album {
+    position: relative;
+    height: 186px;
+    margin: 23px 0 37px;
+    padding: 30px 16px 0 22px;
+    background: #f5f5f5;
+    border: 1px solid #d3d3d3;
+
+    &Item {
+        width: 118px;
+        height: 150px;
+        .index-bg();
+        background-position: -260px 100px;
+
+    }
+
+    &Icon {
+        position: absolute;
+        top: 71px;
+        width: 17px;
+        height: 17px;
+        .index-bg();
+        cursor: pointer;
+    }
+
+    &Left {
+        background-position: -260px -75px;
+        left: 4px;
+    }
+
+    &Right {
+        background-position: -300px -75px;
+        right: 0;
+    }
+}

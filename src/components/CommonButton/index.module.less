@@ -1,0 +1,59 @@
+@import '../../styles/mixins.less';
+
+.common {
+    display: inline-block;
+    height: 31px;
+    line-height: 30px;
+    min-width: 23px;
+    color: #333;
+    cursor: pointer;
+    .btn2();
+}
+
+.btn {
+    padding: 0 5px 0 0;
+    white-space: nowrap;
+    background-position: right -1020px;
+    font-size: 12px;
+
+    &:hover {
+        background-position: right -1106px;
+
+        .btnFavour {
+            background-position: 0 -1063px;
+        }
+
+        .btnShare {
+            background-position: 0 -1268px;
+        }
+
+        .btnComment {
+            background-position: 0 -1508px;
+        }
+
+        .btnDownload {
+            background-position: 0 -2805px;
+        }
+    }
+
+    &Label {
+        padding: 0 2px 0 28px;
+    }
+
+    &Favour {
+        background-position: 0 -977px;
+    }
+
+    &Share {
+        background-position: 0 -1225px;
+    }
+
+    &Download {
+        background-position: 0 -2761px;
+    }
+
+    &Comment {
+        background-position: 0 -1465px;
+    }
+
+}

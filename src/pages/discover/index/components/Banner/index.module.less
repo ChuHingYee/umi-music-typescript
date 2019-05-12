@@ -1,0 +1,88 @@
+@import '../../../../../styles/mixins.less';
+
+.banner {
+    position: relative;
+    height: 336px;
+
+    &Contaner {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+    }
+
+    &Item {
+        width: 100%;
+        height: 100%;
+        background-repeat: repeat-x;
+
+        &Inner {
+            position: relative;
+            width: 982px;
+            height: 336px;
+            margin: 0 auto;
+        }
+    }
+
+    &Download {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        &Container {
+            position: relative;
+            width: 982px;
+            height: 336px;
+            margin: 0 auto;
+
+            .item {
+                position: absolute;
+                top: 0;
+                z-index: 20;
+                right: -1px;
+                width: 254px;
+                height: 336px;
+                background: url('../../../../../assets/download.png') no-repeat 0 0;
+
+                &Btn {
+                    display: block;
+                    width: 215px;
+                    height: 56px;
+                    margin: 212px 0 0 19px;
+                    text-indent: -9999px;
+                    background: url('../../../../../assets/download.png') no-repeat 0 0;
+                    background-position: 0 -340px;
+                    text-decoration: none;
+                }
+
+                &Shadow {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    width: 20px;
+                    height: 336px;
+                    background-position: -1px 0;
+                    background: url('../../../../../assets/banner.png')0 9999px no-repeat;
+                }
+
+                &Left {
+                    left: -20px;
+                    background-position: -1px 0;
+                }
+
+                &Right {
+                    right: -20px;
+                    background-position: -20px 0;
+                }
+
+                &Tips {
+                    margin: 10px auto;
+                    text-align: center;
+                    color: #8d8d8d;
+                }
+            }
+
+        }
+    }
+}

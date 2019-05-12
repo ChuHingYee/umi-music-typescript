@@ -1,0 +1,613 @@
+@import '../../styles/mixins.less';
+
+.player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    width: 100%;
+    z-index: 1002;
+
+    &Container {
+        width: 100%;
+        height: 53px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: -7px;
+        .player-bg();
+        background-position: 0 0;
+        background-repeat: repeat-x;
+        .flex-center-center();
+        transition: all .3s;
+
+        &:hover {
+            top: -53px;
+        }
+
+        &Lock {
+            position: absolute;
+            display: block;
+            top: -14px;
+            right: 15px;
+            width: 52px;
+            height: 67px;
+            .player-bg();
+            background-position: 0 -380px;
+
+            &Icon {
+                display: block;
+                display: block;
+                width: 18px;
+                height: 18px;
+                margin: 6px 0 0 17px;
+                .player-bg();
+                cursor: pointer;
+            }
+
+            &On {
+                background-position: -100px -380px;
+
+                &:hover {
+                    background-position: -100px -400px;
+                }
+            }
+
+            &Off {
+                background-position: -80px -380px;
+
+                &:hover {
+                    background-position: -80px -400px;
+                }
+            }
+        }
+
+        &Wrap {
+            z-index: 15;
+            width: 980px;
+            height: 47px;
+            .flex-start-center();
+
+            .btns {
+                width: 137px;
+                padding: 6px 0 0 0;
+
+                &Icon {
+                    display: inline-block;
+                    width: 28px;
+                    height: 28px;
+                    margin-right: 8px;
+                    margin-top: 5px;
+                    text-indent: -9999px;
+                    .player-bg();
+                    cursor: pointer;
+                }
+
+                &Prev {
+                    background-position: 0 -130px;
+                }
+
+                &Play {
+                    width: 36px;
+                    height: 36px;
+                    margin-top: 0;
+                    background-position: 0 -204px;
+                }
+
+                &Pause {
+                    background-position: 0 -165px;
+                }
+
+                &Next {
+                    background-position: -80px -130px;
+                }
+            }
+
+            .pic {
+                margin-right: 15px;
+                width: 34px;
+                height: 34px;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &Mask {
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    .player-bg();
+                    background-position: 0 -80px;
+                }
+            }
+
+            .play {
+                width: 608px;
+
+                &Info {
+                    height: 28px;
+                    overflow: hidden;
+                    color: #e8e8e8;
+                    text-shadow: 0 1px 0 #171717;
+                    .flex-start-center();
+
+                    &Name {
+                        max-width: 300px;
+                        color: #e8e8e8;
+                        .hide();
+                        margin-right: 15px;
+                    }
+
+                    &Artist {
+                        color: #9b9b9b;
+                    }
+                }
+
+                &Bar {
+                    .flex-start-center();
+
+                    &Pro {
+                        width: 493px;
+                        height: 9px;
+                        .bar-bg();
+                        background-position: right 0;
+                        position: relative;
+
+                        .rdy {
+                            .bar-bg();
+                            height: 9px;
+                            background-position: right -30px;
+                        }
+
+                        .done {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 0%;
+                            height: 9px;
+                            .bar-bg();
+                            background-position: left -66px;
+
+                            &Icon {
+                                position: absolute;
+                                top: -7px;
+                                right: -13px;
+                                width: 22px;
+                                height: 24px;
+                                margin-left: -11px;
+                                .icon-all();
+                                background-position: 0 -250px;
+                            }
+                        }
+                    }
+
+                    &Time {
+                        display: inline-block;
+                        margin-left: 8px;
+                        color: #797979;
+                        text-shadow: 0 1px 0 #121212;
+
+                        .cur {
+                            color: #a1a1a1;
+                        }
+                    }
+                }
+            }
+
+            .open {
+                width: 60px;
+                .flex-start-center();
+
+                &Icon {
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    text-indent: -9999px;
+                    .player-bg();
+                    cursor: pointer;
+                }
+
+                &Add {
+                    background-position: -88px -163px;
+
+                    &:hover {
+                        background-position: -88px -189px;
+                    }
+                }
+
+                &Share {
+                    background-position: -114px -163px;
+
+                    &:hover {
+                        background-position: -114px -189px;
+                    }
+                }
+
+            }
+
+            .ctrl {
+                .flex-start-center();
+                position: relative;
+
+                &Icon {
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    .player-bg();
+                    text-indent: -9999px;
+                }
+
+                &Vol {
+                    background-position: -2px -248px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-position: -31px -248px;
+                    }
+
+                    &Wrap {
+                        position: absolute;
+                        top: -119px;
+                        left: -3px;
+                        width: 32px;
+                        height: 113px;
+                        display: none;
+
+                        .vwBg {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 32px;
+                            height: 113px;
+                            .player-bg();
+                            background-position: 0 -503px;
+                        }
+
+                        .vwBar {
+                            position: absolute;
+                            top: 7px;
+                            left: 14px;
+                            width: 4px;
+                            height: 93px;
+                            padding: 4px 0;
+
+                            &Line {
+                                display: inline-block;
+                                position: absolute;
+                                width: 4px;
+                                bottom: -3px;
+                                left: 0;
+                                .player-bg();
+                                background-position: -40px bottom;
+                                overflow: hidden;
+                            }
+
+                            &Point {
+                                position: absolute;
+                                top: 81px;
+                                left: -7px;
+                                display: block;
+                                width: 18px;
+                                height: 20px;
+                                .icon-all();
+                                background-position: -40px -250px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    &Show {
+                        display: block;
+                    }
+                }
+
+                &Normal {
+                    background-position: -3px -344px;
+
+                    &:hover {
+                        background-position: -33px -344px;
+                    }
+                }
+
+                &Random {
+                    background-position: -66px -248px;
+
+                    &:hover {
+                        background-position: -93px -248px;
+                    }
+                }
+
+                &Single {
+                    background-position: -66px -344px;
+
+                    &:hover {
+                        background-position: -93px -344px;
+                    }
+                }
+
+                &List {
+                    display: inline-block;
+                    width: 59px;
+                    padding-left: 21px;
+                    cursor: pointer;
+                    .player-bg();
+                    background-position: -42px -68px;
+                    line-height: 27px;
+                    text-align: center;
+                    color: #666;
+                    text-shadow: 0 1px 0 #080707;
+                    text-indent: 0;
+                    text-decoration: none;
+                }
+            }
+        }
+
+
+    }
+
+    &Show {
+        top: -53px;
+    }
+
+    .panel {
+        position: absolute;
+        left: 50%;
+        bottom: 47px;
+        width: 986px;
+        height: 301px;
+        margin-left: -493px;
+        display: none;
+
+        &Show {
+            display: block;
+        }
+
+        &Header {
+            height: 41px;
+            padding: 0 5px;
+            .playlist-bg();
+            background-position: 0 0;
+            .flex-between-center();
+
+            &List {
+                width: 560px;
+                position: relative;
+                height: 40px;
+                .flex-between-center();
+                padding-left: 25px;
+
+                .name {
+                    font-size: 14px;
+                    color: #e2e2e2;
+                }
+
+                .btns {
+                    .flex-end-center();
+
+                    &Link {
+                        color: #ccc;
+                        font-size: 12px;
+                        .flex-center-center();
+
+                        &Icon {
+                            display: inline-block;
+                            width: 16px;
+                            height: 16px;
+                            .playlist-icon();
+                            margin-right: 2px;
+                        }
+
+                        &Favour {
+                            background-position: -24px 0;
+                        }
+
+                        &Clean {
+                            width: 13px;
+                            background-position: -51px 0;
+                        }
+                    }
+
+                    &Line {
+                        display: inline-block;
+                        margin: 0 5px;
+                        height: 15px;
+                        border-left: 1px solid #000;
+                        border-right: 1px solid #2c2c2c;
+
+
+                    }
+                }
+            }
+
+            &Lrc {
+                flex: 1;
+                text-align: center;
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+
+        &Container {
+            .flex-between-center();
+            position: relative;
+            width: 982px;
+            height: 260px;
+            padding: 0px 2px;
+            background: #121212;
+            opacity: 0.8;
+            margin: 0 auto;
+
+            &List {
+                width: 558px;
+                height: 260px;
+
+                .lItem {
+                    .flex-between-center();
+                    height: 28px;
+
+                    &:hover {
+                        background: #000;
+                        cursor: pointer;
+
+                        .lItemInfoBtns {
+                            display: flex;
+                        }
+                    }
+
+                    &Name {
+                        .flex-start-center();
+                        position: relative;
+
+                        &Icon {
+                            position: absolute;
+                            display: none;
+                            width: 10px;
+                            height: 13px;
+                            .playlist-icon();
+                            background-position: -182px 0;
+                            left: 5px;
+                            top: 3px;
+                        }
+
+                        &Txt {
+                            width: 256px;
+                            .hide();
+                            padding-left: 20px;
+                            font-size: 12px;
+                            color: #ccc;
+                        }
+                    }
+
+                    &Info {
+                        .flex-end-center();
+                        font-size: 12px;
+
+                        &Btns {
+                            width: 95px;
+                            margin-right: 10px;
+                            .flex-end-center();
+                            display: none;
+
+                            &Icon {
+                                display: inline-block;
+                                width: 13px;
+                                height: 16px;
+                                .playlist-icon();
+                                margin-left: 10px;
+                            }
+
+                            &Del {
+                                background-position: -51px 0;
+                            }
+
+                            &Download {
+                                width: 14px;
+                                background-position: -57px -50px;
+                            }
+
+                            &Share {
+                                width: 14px;
+                                background-position: 0 0;
+                            }
+
+                            &Favour {
+                                width: 16px;
+                                background-position: -24px 0;
+                            }
+                        }
+
+                        &Art {
+                            width: 80px;
+                            .hide();
+
+                            &Txt {
+                                color: #9b9b9b;
+                            }
+                        }
+
+                        &Time {
+                            width: 45px;
+                            padding-left: 10px;
+                            color: #666;
+                        }
+
+                        &Share {
+                            display: inline-block;
+                            width: 16px;
+                            margin-left: 20px;
+                            height: 16px;
+                            .playlist-icon();
+                            background-position: -80px 0px;
+                        }
+                    }
+                }
+
+                .lActive {
+                    background: #000;
+                    opacity: 1;
+
+                    .lItemNameIcon {
+                        display: block;
+                    }
+                }
+
+                .rItem {}
+            }
+
+            &Lrc {
+                width: 420px;
+                height: 219px;
+
+                .lrcItem {
+                    p {
+                        color: #989898;
+                        word-wrap: break-word;
+                        text-align: center;
+                        line-height: 32px;
+                        font-size: 12px;
+                    }
+                }
+
+                .lrcActived {
+                    p {
+                        color: #fff;
+                        font-size: 14px;
+                        transition: color 0.7s linear;
+                    }
+                }
+            }
+        }
+    }
+
+    :global {
+        .ReactVirtualized__List {
+            &::-webkit-scrollbar {
+                width: 8px;
+                height: 1px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 8px;
+                box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+                background: #535353;
+            }
+
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+                border-radius: 8px;
+                background: #000;
+            }
+        }
+
+        .ReactVirtualized__List:focus {
+            outline: none;
+        }
+    }
+}

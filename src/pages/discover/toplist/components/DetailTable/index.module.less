@@ -1,0 +1,45 @@
+@import '../../../../../styles/mixins.less';
+
+.table {
+    width: 100%;
+    border: 1px solid #d9d9d9;
+
+    .header {
+        .flex-between-center();
+
+        &Row {
+            height: 38px;
+            vertical-align: top;
+            text-align: left;
+            font-weight: normal;
+            color: #666;
+            .table-bg();
+            background-color: #f7f7f7;
+            background-position: 0 0;
+            background-repeat: repeat-x;
+
+            &Inner {
+                line-height: 18px;
+                padding: 8px 10px;
+                .table-bg();
+                background-position: 0 -56px;
+            }
+        }
+    }
+
+    .row1 {
+        width: 77px;
+    }
+
+    .row2 {
+        flex: 1;
+    }
+
+    .row3 {
+        width: 91px;
+    }
+
+    .row4 {
+        width: 93px;
+    }
+}

@@ -1,0 +1,53 @@
+@import '../../styles/mixins.less';
+
+.container {
+    .panel {
+        display: inline-block;
+        width: 140px;
+        height: 140px;
+        position: relative;
+
+        &Pic {
+            width: 100%;
+            height: 100%;
+        }
+
+        &Bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 27px;
+            color: #ccc;
+            .cover-bg();
+            background-position: 0 -537px;
+            .flex-between-center();
+            padding: 0 10px;
+
+            &Info {
+                .icon {
+                    display: inline-block;
+                    width: 14px;
+                    height: 11px;
+                    .icon-all();
+                    background-position: 0 -24px;
+                }
+
+            }
+
+            &Play {
+                display: inline-block;
+                width: 16px;
+                height: 17px;
+                .icon-all();
+                background-position: 0 0;
+                cursor: pointer;
+
+                &:hover {
+                    background-position: 0 -60px;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,259 @@
+@import '../../../styles/mixins.less';
+
+.page {
+    width: 980px;
+    min-height: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-width: 0 1px;
+    .wrap4();
+    display: flex;
+
+    &Left {
+        display: flex;
+        flex-wrap: wrap;
+        width: 0;
+        flex: 1;
+        padding: 47px 30px 40px 39px;
+
+        .info {
+            display: flex;
+            width: 100%;
+
+            &Left {
+                margin-right: 20px;
+
+                &Cover {
+                    width: 200px;
+                    height: 200px;
+                    position: relative;
+
+                    .pic {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .mask {
+                        position: absolute;
+                        display: inline-block;
+                        width: 208px;
+                        height: 208px;
+                        top: -4px;
+                        left: -4px;
+                        .cover-bg();
+                        background-position: 0 -1285px;
+                    }
+                }
+            }
+
+            &Right {
+                flex: 1;
+
+                .name {
+                    .flex-start-center();
+                    font-size: 20px;
+                    font-weight: 500;
+                    margin-bottom: 12px;
+                }
+
+                .row {
+                    line-height: 18px;
+                    color: #666;
+                    margin-bottom: 20px;
+                    .flex-start-center();
+
+                    &Ava {
+                        display: inline-block;
+                        width: 35px;
+                        height: 35px;
+                        margin-right: 10px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    &User {
+                        margin-right: 15px;
+                    }
+
+                    &Link {
+                        color: #0c73c2;
+                    }
+                }
+
+                .btns {
+                    .flex-start-center();
+                    margin-bottom: 25px;
+
+                    &Item {
+                        margin-right: 5px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+                .tags {
+                    margin-bottom: 5px;
+                    line-height: 22px;
+
+                    &Item {
+                        display: inline-block;
+                        .btn2();
+                        padding: 0 10px 0 0;
+                        text-shadow: 0 1px #fdfdfd;
+                        background-position: right -27px;
+                        margin-right: 10px;
+                        color: #777;
+
+                        i {
+                            display: inline-block;
+                            position: relative;
+                            .btn2();
+                            height: 22px;
+                            font-size: 12px;
+                            line-height: 22px;
+                            padding: 0 3px 0 13px;
+                            background-position: 0 0;
+                        }
+
+                        &:hover {
+                            background-position: right -1430px;
+
+                            i {
+                                background-position: 0 -1400px;
+                            }
+                        }
+
+                    }
+                }
+
+                .lrc {
+                    &Row {
+                        font-size: 12px;
+                        color: #333;
+                        line-height: 23px;
+                        word-wrap: break-word;
+                        word-break: break-word;
+                        white-space: normal;
+
+                        p {
+                            margin: 0;
+                        }
+                    }
+
+                    &Hide {
+                        display: none;
+                    }
+
+                    &Btn {
+                        color: #0c73c2;
+                        cursor: pointer;
+                    }
+                }
+
+                .tips {
+                    text-align: right;
+                    margin-top: 48px;
+                    line-height: 30px;
+
+                    &Link {
+                        color: #0c73c2;
+                    }
+                }
+            }
+        }
+
+        .list {
+            margin-bottom: 25px;
+        }
+
+        .comment {
+            width: 100%;
+
+            &Panel {
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &Header {
+                    position: relative;
+                    top: 1px;
+                    height: 20px;
+                    border-bottom: 1px solid #cfcfcf;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    &Right {
+        width: 270px;
+        padding: 20px 40px 40px 30px;
+
+        .userList {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 15px;
+            margin-left: -13px;
+
+            &Item {
+                display: inline-block;
+                margin: 0 0 13px 13px;
+
+                &Ava {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+
+    }
+
+    .icon {
+        display: inline-block;
+        .icon();
+
+        &Label {
+            width: 54px;
+            height: 24px;
+            background-position: 0 -186px;
+            margin-right: 10px;
+        }
+
+        &Mv {
+            width: 21px;
+            height: 18px;
+            background-position: 0 -18px;
+            margin-left: 7px;
+        }
+
+        &Arrow {
+            width: 11px;
+            height: 8px;
+            background-position: -65px -520px;
+        }
+    }
+
+    .icon2 {
+        display: inline-block;
+        width: 10px;
+        height: 11px;
+        .icon2();
+
+        &Play {
+            background-position: -69px -455px;
+        }
+
+        &Add {
+            background-position: -87px -454px;
+        }
+    }
+}

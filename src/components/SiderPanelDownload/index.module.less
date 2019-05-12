@@ -1,0 +1,41 @@
+@import '../../styles/mixins.less';
+.download {
+  &List {
+    width: 100%;
+    .down-bg();
+    height: 65px;
+    margin-bottom: 10px;
+    background-position: 0 -392px;
+    display: flex;
+    justify-content: space-between;
+    &Item {
+      display: block;
+      width: 42px;
+      height: 48px;
+      text-indent: -9999px;
+      &:hover {
+        .down-bg();
+      }
+    }
+    &IOS {
+      &:hover {
+        background-position: 0 -472px;
+      }
+    }
+    &PC {
+      width: 60px;
+      &:hover {
+        width: 60px;
+        background-position: -70px -472px;
+      }
+    }
+    &Android {
+      &:hover {
+        background-position: -158px -472px;
+      }
+    }
+  }
+  &Tip {
+    color: #999;
+  }
+}

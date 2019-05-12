@@ -1,0 +1,82 @@
+@import '../../../../../styles/mixins.less';
+
+
+.item {
+    height: 32px;
+    position: relative;
+    .flex-between-center();
+    flex-wrap: nowrap;
+    padding-left: 15px;
+
+    &:hover {
+        .itemBtn {
+            display: flex;
+        }
+    }
+
+    &Info {
+        flex: 1;
+        .flex-start-center();
+
+        &Index {
+            display: inline-block;
+            width: 35px;
+            height: 100%;
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+        }
+
+        &Top {
+            display: inline-block;
+            color: #c10d0c;
+        }
+
+        &Name {
+            flex: 1;
+            width: 0;
+            font-size: 12px;
+            color: #000;
+            .hide();
+        }
+    }
+
+    &Btn {
+        flex-shrink: 0;
+        height: 32px;
+        .flex-end-center();
+        display: none;
+
+        &Icon {
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            margin-right: 10px;
+            .index-bg();
+            cursor: pointer;
+        }
+
+        &Play {
+            background-position: -267px -268px;
+        }
+
+        &Add {
+            .icon();
+            background-position: 0 -700px;
+            margin: 2px 6px 0 0;
+        }
+
+        &Favuour {
+            background-position: -297px -268px;
+        }
+    }
+
+}
+
+.odd {
+    background-color: #e8e8e8;
+}
+
+.even {
+    background-color: #f4f4f4;
+}

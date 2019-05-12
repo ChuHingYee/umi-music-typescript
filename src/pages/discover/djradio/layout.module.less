@@ -1,0 +1,63 @@
+@import '../../../styles/mixins.less';
+
+.radio {
+    width: 980px;
+    min-height: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-width: 0 1px;
+    padding: 40px;
+    position: relative;
+
+    .carousel {
+        margin-left: -33px;
+
+        &Row {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+
+            &Item {
+                display: inline-block;
+                width: 70px;
+                height: 70px;
+                background-position: 0 9999px;
+                text-align: center;
+                color: #888;
+                margin: 0 0 25px 33px;
+
+                .iICon {
+                    width: 48px;
+                    height: 48px;
+                    margin: 2px auto 0;
+                    background-position: 0 0;
+                }
+
+                .iLabel {
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+
+    :global {
+        .slick-dots {
+            li {
+                button {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: #ddd;
+                }
+            }
+
+            li.slick-active {
+                button {
+                    width: 8px;
+                    background: #c20c0c;
+                }
+            }
+        }
+    }
+}

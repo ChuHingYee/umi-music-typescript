@@ -1,0 +1,116 @@
+@import '../../../../../styles/mixins.less';
+
+.wrap {
+    position: absolute;
+    top: 95px;
+    z-index: 5;
+    width: 700px;
+    left: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    background: #fff;
+
+    &Header {
+        height: 46px;
+        padding-left: 26px;
+        border-bottom: 1px solid #e6e6e6;
+        .flex-start-center();
+
+        &Btn {
+            display: inline-block;
+            width: 75px;
+            height: 26px;
+            line-height: 26px;
+            .btn1();
+            background-position: 0 -64px;
+            text-align: center;
+            font-size: 12px;
+            color: #333;
+        }
+    }
+
+    &Tabs {
+        padding-bottom: 40px;
+
+        &Arrow {
+            position: absolute;
+            top: -11px;
+            left: 118px;
+            display: inline-block;
+            width: 24px;
+            height: 11px;
+            .icon-all();
+            background-position: -48px 0;
+            vertical-align: middle;
+        }
+
+        .tabsRow {
+            display: flex;
+
+            &Label {
+                width: 96px;
+                padding-top: 15px;
+                padding-left: 26px;
+                border-right: 1px solid #e6e6e6;
+                font-size: 12px;
+                font-weight: 600;
+
+                .lIcon {
+                    display: inline-block;
+                    overflow: hidden;
+                    vertical-align: middle;
+                    .icon();
+                    margin-right: 8px;
+                    margin-bottom: 4px;
+                }
+
+                .lIcon1 {
+                    width: 23px;
+                    height: 23px;
+                    background-position: -20px -735px;
+                }
+
+                .lIcon2 {
+                    width: 24px;
+                    height: 24px;
+                    background-position: 0 -60px;
+                }
+
+                .lIcon3 {
+                    width: 24px;
+                    height: 24px;
+                    background-position: 0 -88px;
+                }
+
+                .lIcon4 {
+                    width: 24px;
+                    height: 24px;
+                    background-position: 0 -117px;
+                }
+
+                .lIcon5 {
+                    width: 24px;
+                    height: 24px;
+                    background-position: 0 -141px;
+                }
+            }
+
+            &Types {
+                flex: 1;
+                padding: 16px 15px 0 15px;
+
+                .typeName {
+                    color: #333;
+                    white-space: nowrap;
+                    font-size: 12px;
+                }
+
+                .typeLine {
+                    display: inline-block;
+                    margin: 0 8px 0 10px;
+                    color: #d8d8d8;
+                }
+            }
+        }
+    }
+}

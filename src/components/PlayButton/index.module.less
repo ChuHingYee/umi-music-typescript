@@ -1,0 +1,68 @@
+@import '../../styles/mixins.less';
+
+.common {
+    display: inline-block;
+    height: 31px;
+    line-height: 31px;
+    color: #fff;
+    overflow: hidden;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+    .btn2();
+}
+
+.btn {
+    display: inline-block;
+
+    &Play {
+        padding: 0 5px 0 0;
+        white-space: nowrap;
+        background-position: right -428px;
+        font-size: 12px;
+
+        &:hover {
+            .btnPlayLabel {
+                background-position: 0 -469px;
+
+            }
+
+            .icon {
+                background-position: -28px -1622px;
+            }
+
+        }
+
+        &Label {
+            padding: 0 7px 0 8px;
+            background-position: 0 -387px;
+            .flex-start-center();
+
+
+
+            .icon {
+                display: inline-block;
+                width: 20px;
+                height: 18px;
+                margin-right: 2px;
+                .btn2();
+                background-position: 0 -1622px;
+                overflow: hidden;
+            }
+        }
+
+    }
+
+    &Add {
+        width: 31px;
+        margin-left: -3px;
+        padding: 0 5px 0 0;
+        white-space: nowrap;
+        background-position: 0 -1588px;
+
+        &:hover {
+            background-position: -40px -1588px;
+
+        }
+    }
+}

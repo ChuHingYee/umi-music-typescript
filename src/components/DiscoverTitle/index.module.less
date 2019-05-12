@@ -1,0 +1,44 @@
+@import '../../styles/mixins.less';
+
+.bg {
+    background: url('../../assets/index.png') no-repeat 0 9999px;
+}
+
+.row {
+    width: 100%;
+    height: 33px;
+    padding: 0 10px 0 34px;
+    border-bottom: 2px solid #C10D0C;
+    font-size: 12px;
+    .bg();
+    background-position: -225px -156px;
+    .flex-between-center();
+
+    &Label {
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 28px;
+        display: flex;
+        justify-content: flex-start;
+
+        &Txt {
+            color: #333;
+        }
+    }
+
+    &More {
+        &Txt {
+            color: #666;
+        }
+
+        &Icon {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin-left: 4px;
+            vertical-align: middle;
+            .bg();
+            background-position: 0 -240px;
+        }
+    }
+}
